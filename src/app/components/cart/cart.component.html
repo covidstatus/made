@@ -1,0 +1,31 @@
+
+<body>
+    <div class="container">
+        <h1 class='text-center'>your products in cart</h1>
+  
+        <table>
+            <thead>
+                <tr>
+                    <td> name </td>
+                    <td> price </td>
+                    <td> amount </td>
+                    <td> salary </td>
+                    <td> options </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let item of cart; index as i'>
+                    <td> {{item.name | titlecase}}  </td>
+                    <td> {{item.price | currency}} </td>
+                    <td> <input type="number" placeholder="Kg" [(ngModel)]='item.amount'></td>
+                    <td> {{item.amount * item.price | currency}} </td>
+                    <td> 
+                        <button class='btn btn-primary' (click)='save(i)'> Save </button>
+                        <button class='btn btn-danger' (click)='delate(i)'> Delate</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="overlay"></div>
+</body>

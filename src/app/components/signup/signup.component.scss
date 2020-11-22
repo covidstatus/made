@@ -1,0 +1,77 @@
+body{
+    background: url('../../../assets/imgs/login/pyramids.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height:900px;
+    padding-top: 40px;
+}
+
+form{
+    border-radius: 34px;
+    width: 450px;
+    margin: 130px auto 0 auto;
+    background: #fff;
+    border:1px solid #fff;
+    padding: 50px 15px;
+    position: relative;
+    @media(max-width:767px){
+        width:100% !important;
+    }
+    .main_user{
+        font-size: 63px;
+        position: absolute;
+        top: -44px;
+        padding: 25px 29px;
+        border-radius: 50%;
+        left: 38%;
+        color: #ffffff;
+        background: #3A7FC4;
+    }
+    .input_user{
+        position: absolute;
+        right: 25px;
+        top: 44%;
+        color: #555555e0;
+    }
+    .input_key{
+        position: absolute;
+        right: 25px;
+        top: 61%;
+        color: #555555e0;
+    }
+    h1{
+        margin: 30px 0;
+        color:#222;
+    }
+    div{
+        margin-bottom: 25px;
+        width:100%;
+        input{
+            width: 100%;
+            padding:9px;
+            border-radius:10px;
+            outline: none;
+            border:1px solid #F2F2F2;
+            background: #F2F2F2;
+        }
+    }
+    .alert{
+        margin-top:5px;
+        padding:3px 8px;
+        border-radius: 5px;;
+    }
+    button{
+        display: block;
+        margin: 0 auto;
+        padding:10px 35px;
+        font-size: 20px;
+        border-radius: 10px;
+        background: #3A7FC4 !important;
+    }
+    .err{
+        color:#f00;
+    }
+    dir{
+        margin:0;
+        padding-left:0;
+    }
+}

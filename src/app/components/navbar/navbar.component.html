@@ -1,0 +1,42 @@
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand logo" href="#">  <h1> <img src="assets/imgs/nav/logo.PNG" alt="logo">  made in egypt </h1></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+     <div class="collapse navbar-collapse" id="navbarNav" >
+        <ul class="navbar-nav"  >
+            <li class="seach" class="nav-item" >
+                <div class='search'>
+                    <div>
+                        <input type="text" placeholder="Search">
+                        <button>search</button>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item active">
+                 <a class="nav-link" routerLink=''>Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item" *ngIf='isuser'>
+                <a class="nav-link" routerLink='dash'>Admin</a>
+            </li>
+            <li class="nav-item" *ngIf='isuser'>
+                <a class="nav-link" routerLink='cart'>  <i class="fa fa-cart-plus"></i> </a>
+            </li>
+            <li class="nav-item" *ngIf='!isuser'>
+                <a class="nav-link" routerLink='login'>Log In </a>
+            </li>
+            <li class="nav-item" *ngIf='!isuser'>
+                <a class="nav-link" routerLink='signup'>Sign Up </a>
+            </li>
+            <li class="nav-item" *ngIf='isuser'>
+                <button class='btn btn-danger' (click)='logout()'> Log out </button>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!------------------------------------------------------------- end  navbar ---------------------->

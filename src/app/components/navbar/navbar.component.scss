@@ -1,0 +1,89 @@
+
+/******************************************************* start nav bar **********************************/
+.navbar{
+    top:0;
+    padding:15px;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    background: #fff !important;
+
+    .logo{
+        padding-top: 5px;
+       h1{
+           font-weight: bold;
+           margin-top: 5px;
+           padding-left: 50px;
+           font-size: 27px;
+           text-transform: capitalize;
+           font-family: 'Hind Siliguri', sans-serif;
+           font-family: 'Poppins', sans-serif;
+           font-family: 'Roboto', sans-serif;
+           font-family: 'Titillium Web', sans-serif;
+           position: relative;
+           img{
+               width:50px;
+               height: 30px;
+               position: absolute;
+               left:-4px;
+           }
+       }
+    }
+
+
+   .collapse{
+       text-align: right !important;
+       position: relative;
+
+        ul{
+            padding: 0;
+            .search{
+                padding:0 50px;
+                @media(max-width:991px){
+                    display: none;
+                }
+                input{
+                    border: 1.5px solid #D92121;
+                    padding: 6px;
+                    
+                    width:400px;
+                    @media(max-width:1230px){
+                        width:250px;
+                    }
+                    @media(min-width:1231px) and (max-width:1333px){
+                        width:350px;
+                    }
+                }
+                button{
+                    padding: 8px 28px;
+                    background: #D92121;
+                    margin-left: -5px;
+                    margin-top: -1px;
+                    border: none;
+                    text-transform: capitalize;
+                    color: #fff;
+                    font-weight: 400;
+                    @media(max-width:1200px){
+                        padding:8px;                    
+                    }
+                }
+            }
+
+            .nav-item{
+                padding:0 8px;
+                .nav-link{
+                    i{
+                        font-size: 28px;
+                        color: #4CAF50;
+                    }
+                    span{
+                        margin-left: 7px;
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+   }
+          
+}
+/****************************************************** end nab bar ************************************/

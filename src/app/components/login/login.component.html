@@ -1,0 +1,21 @@
+<body>
+    <div class="container">
+        <form #f='ngForm' (ngSubmit)='login(f)'>
+            <i class="fa fa-user main_user"></i>
+            <h1 class='text-center'> Log In </h1>
+            <div class="main_div">
+                <input type="email" name='email' ngModel #mail='ngModel' placeholder="E-mail" email required>   <i class="fa fa-user input_user"></i>
+                <div class='alert alert-danger' *ngIf='mail.touched && mail.errors?.required'> * required </div>
+                <div class='alert alert-danger' *ngIf='mail.touched && mail.errors?.email'>  * this is not email </div>
+            </div>
+            
+            <div class='main_div'>
+                <input type="password" name='password' ngModel #pass='ngModel' placeholder="Password" minlength="2" required>  <i class="fa fa-unlock-alt input_key"></i> 
+                <div class='alert alert-danger' *ngIf='pass.touched && pass.errors?.required'>  * required </div>
+                <div class='alert alert-danger' *ngIf='pass.touched && pass.errors?.minlength'> * the pass is very short  </div>
+            </div>
+            <div class='err'> {{err}}</div>
+            <button class='btn btn-primary'> Log In </button>
+        </form>
+    </div>
+</body>

@@ -1,0 +1,55 @@
+
+<body>
+    <div class="container">
+        <form #f='ngForm' (ngSubmit)='add(f)'>
+            <i class="fa fa-product-hunt main_user"></i>
+            <h1 class='text-center'>  Add new product</h1>
+            <div>
+                <input type="text" name='name' ngModel #name='ngModel'  placeholder="name" required>
+                <div *ngIf='name.touched && name.errors?.required'  class='alert alert-danger'> * required </div>
+            </div>
+
+            <div>
+                <input type="number" name='price' ngModel #price='ngModel'   placeholder="price" required>
+                <div class='alert alert-danger' *ngIf='price.touched && price.errors?.required'> * required </div>
+            </div>
+
+
+            <div>
+                <input type="file" name='img' ngModel #img required>
+            </div>
+
+            <button class='btn btn-primary' *ngIf='f.valid'> Add new good  </button>
+        
+        </form>
+    </div>
+
+
+     <!-------------------------- start control tabel -->
+    <div class="container">
+        <h1 class='text-center table_title' >All Products We Have</h1>
+        <table>
+            <thead>
+                <tr>
+                    <td> name </td>
+                    <td> price </td>
+                    <td> Edit price </td>
+                    <td> options </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let item of alldata; index as i'>
+                    <td> {{item.name | titlecase}}  </td>
+                    <td> {{item.price | currency}} </td>
+                    <td> <input #price type="number" placeholder="Kg" [(ngModel)]='item.price'></td>
+                    <td> 
+                        <button class='btn btn-primary' (click)='save(i)'> Save </button>
+                        <button class='btn btn-danger' (click)='delate(i)'> Delate</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+     <!-------------------------- end control tabel -->
+    <div class="overlay"></div>
+</body>
